@@ -7,38 +7,31 @@
 
 import SwiftUI
 
-struct User: Identifiable {
-    var id = UUID()
-    var name = "Taylor Swift"
-    var profession = "Singer"
+struct UserView: View {
+    var body: some View {
+        Group {
+            Text("Name: Paul")
+            Text("Country: England")
+            Text("Pets: Luna, Arya and Toby")
+        }
+    }
 }
 
 struct ContentView: View {
-    @State private var selectedUser: User? = nil
-    @State private var isShowingAlert = false
-    @State private var alertTitle = "User Selected"
+    @Environment(\.horizontalSizeClass) var sizeClass
     
     var body: some View {
-        Text("Hello, world!")
-            .onTapGesture {
-                selectedUser = User()
-                
-                if let selectedUser = selectedUser {
-                    alertTitle = selectedUser.name
-                    isShowingAlert.toggle()
-                }
-                
-            }
-            .alert(alertTitle, isPresented: $isShowingAlert, presenting: selectedUser) { user in
-                Button(role: .cancel, action: { }, label: { Text("OK" )})
-            } message: { user in
-                Text(user.profession)
-            }
+        if sizeClass == .compact {
+            VStack(content: UserView.init)
+        } else {
+            HStack(content: UserView.init)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+.previewInterfaceOrientation(.portrait)
     }
 }
