@@ -8,19 +8,31 @@
 import SwiftUI
 
 struct User: Identifiable {
-    var id = "Taylor Swift"
+    var id = UUID()
+    var name = "Taylor Swift"
+    var profession = "Singer"
 }
 
 struct ContentView: View {
     @State private var selectedUser: User? = nil
+    @State private var isShowingAlert = false
+    @State private var alertTitle = "User Selected"
     
     var body: some View {
         Text("Hello, world!")
             .onTapGesture {
                 selectedUser = User()
+                
+                if let selectedUser = selectedUser {
+                    alertTitle = selectedUser.name
+                    isShowingAlert.toggle()
+                }
+                
             }
-            .alert(item: $selectedUser) { user in
-                Alert(title: Text(user.id))
+            .alert(alertTitle, isPresented: $isShowingAlert, presenting: selectedUser) { user in
+                Button(role: .cancel, action: { }, label: { Text("OK" )})
+            } message: { user in
+                Text(user.profession)
             }
     }
 }
