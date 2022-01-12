@@ -36,7 +36,21 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle("Resorts")
+            .navigationTitle("Resorts")
+            
+            WelcomeView()
+                .navigationBarHidden(true)
+        }
+    }
+}
+
+// Not used in this app
+extension View {
+    func phoneOnlyStackNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return AnyView(self.navigationViewStyle(StackNavigationViewStyle()))
+        } else {
+            return AnyView(self)
         }
     }
 }

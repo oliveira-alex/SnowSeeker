@@ -14,6 +14,7 @@
 		E715F1D2278EF3F800063640 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = E715F1D1278EF3F800063640 /* resorts.json */; };
 		E715F1D4278EF4C600063640 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E715F1D3278EF4C600063640 /* Resort.swift */; };
 		E715F1D6278EF5FB00063640 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E715F1D5278EF5FA00063640 /* Bundle-Decodable.swift */; };
+		E715F1D8278F05E100063640 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E715F1D7278F05E000063640 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E715F1D1278EF3F800063640 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
 		E715F1D3278EF4C600063640 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = "<group>"; };
 		E715F1D5278EF5FA00063640 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		E715F1D7278F05E000063640 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				E715F1C3278D9ED200063640 /* SnowSeekerApp.swift */,
 				E715F1C5278D9ED200063640 /* ContentView.swift */,
+				E715F1D7278F05E000063640 /* WelcomeView.swift */,
 				E715F1D3278EF4C600063640 /* Resort.swift */,
 				E715F1D5278EF5FA00063640 /* Bundle-Decodable.swift */,
 				E715F1D1278EF3F800063640 /* resorts.json */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E715F1D8278F05E100063640 /* WelcomeView.swift in Sources */,
 				E715F1C6278D9ED200063640 /* ContentView.swift in Sources */,
 				E715F1D4278EF4C600063640 /* Resort.swift in Sources */,
 				E715F1C4278D9ED200063640 /* SnowSeekerApp.swift in Sources */,
