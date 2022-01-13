@@ -50,6 +50,7 @@ struct ResortView: View {
                     
                     Text("Facilities")
                         .font(.headline)
+                        .fontWeight(.heavy)
                     
                     HStack {
                         ForEach(resort.facilityTypes) { facility in
